@@ -126,20 +126,20 @@ map_configuration = {
         urls: ['http://a.tile.thunderforest.com/transport/${z}/${x}/${y}.png'], # currently only one is being used, in the future it will load balance
         level: 1, # used to order the layer appearance
         opacity: 1.0 # in case you want the layer to have some transparency
-      }], # see geojson specification for feature/object support. See http://leafletjs.com/reference.html#path-options for formatting options, the following attributes under properties are supported: `stroke, color, weight, opacity, fill, fillColor, fillOpacity, fillRule, dashArray, lineCap, lineJoin`
+      }], # see GeoJSON specification for feature/object support. See http://leafletjs.com/reference.html#path-options for formatting options, the following attributes under properties are supported: `stroke, color, weight, opacity, fill, fillColor, fillOpacity, fillRule, dashArray, lineCap, lineJoin`
       geojson: '{
         "type": "FeatureCollection",
         "features": [{
           "type":"Feature",
-          "geometry":{"type":"Point", "coordinates":[-32.026862,-55.425003]},
+          "geometry":{"type":"Point", "coordinates":[-55.425003,-32.026862]},
           "properties":{"image": "./marker.png"}
         }, {
           "type": "Feature",
-          "geometry": {"type": "LineString", "coordinates": [ [-32.026862,-55.425003], [-31.026862,-55.425003], [-31.026862,-54.425003], [-32.026862,-54.425003] ] },
+          "geometry": {"type": "LineString", "coordinates": [ [-55.425003,-32.026862], [-55.425003,-31.026862], [-54.425003,-31.026862], [-54.425003,-32.026862] ] },
           "properties": {"color": "#000000"}
         }, {
           "type": "Feature",
-          "geometry": {"type": "Polygon", "coordinates": [ [-32.126862,-55.825003], [-31.426862,-55.225003], [-31.326862,-54.825003], [-32.146862,-54.835003] ] },
+          "geometry": {"type": "Polygon", "coordinates": [ [-55.825003,-32.126862], [-55.225003,-31.426862], [-54.825003,-31.326862], [-54.835003,-32.146862] ] },
           "properties": {
             "stroke": true,
             "color": "#000000",
