@@ -72,7 +72,7 @@ module MapPrint
 
     def feature_collection(features)
       features.each do |object|
-        feature(object)
+        feature(object['geometry'], object['properties'])
       end
     end
 
