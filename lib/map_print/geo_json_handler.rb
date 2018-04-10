@@ -41,6 +41,8 @@ module MapPrint
     def validate_feature(geometry, properties)
       raise NoGeometryPresent.new("No geometry present for this feature") if geometry.nil?
       case geometry['type']
+      when 'LineString', 'Polygon'
+        # No checks needed
       when 'Point'
         if properties.nil? || properties['image'].nil?
           raise NoPointImage.new("Missing image in point geometry")
